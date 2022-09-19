@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: blue;
+        }
+
+        #p11 {
+            color: blue;
+        }
+
+        .p22 {
+            color: brown;
+        }
+
+        div ul li {
+            color: green;
+        }
+
+        h1 em {
+            color: red;
+        }
+
+        h1>strong {
+            color: yellowgreen;
+        }
+
+        p+div {
+            color: rgb(232, 13, 53);
+        }
+
+        a[href] {
+            color: rebeccapurple;
+        }
+
+        p[class="important warning"] {
+            color: darkmagenta;
+        }
+    </style>
+</head>
+
+<body>
+    简单选择器（根据名称、id、类来选取元素）<br>
+    <span>选择器</span>
+    <p id="p11">选择器</p>
+    <p class="p22">选择器</p>
+    <hr />
+    组合器选择器（根据它们之间的特定关系来选取元素）<br>
+    <div>
+        <ul>
+            <li>水水水</li>
+            <li>水水水</li>
+            <li>水水水</li>
+        </ul>
+    </div>
+
+    <h1>This is a <em>important</em> heading</h1>
+    <h1>This is a <em>important</em> paragraph.</h1>
+
+
+    后代选择器：
+    <h1>This is <strong>very</strong> <strong>very</strong> important.</h1>
+    <h1>This is <em>really <strong>very</strong></em> important.</h1>
+
+    相邻兄弟选择器：
+    <div>
+        <p>兄弟1</p>
+        <div>兄弟2</div>
+        <div>兄弟2</div>
+        <div>兄弟2</div>
+    </div>
+
+
+    <hr />
+    伪类选择器（根据特定状态选取元素）<br>
+    <hr />
+    伪元素选择器（选取元素的一部分并设置其样式）<br>
+    <hr />
+    属性选择器（根据属性或属性值来选取元素）<br>
+    <a href="#">属性选择器href</a>
+    <a>属性选择器</a>
+
+    <p class="important warning">This paragraph is a very important warning.</p>
+</body>
+
+</html>

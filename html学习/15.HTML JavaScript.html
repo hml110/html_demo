@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>我的第一段 JavaScript</h1>
+
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+        点击我来显示日期和时间
+    </button>
+
+    <p id="demo"></p>
+
+
+    <h1>我的第一段 JavaScript</h1>
+
+    <p id="demo">JavaScript 可以更改 HTML 元素的样式。</p>
+
+    <script>
+        function myFunction() {
+            document.getElementById("demo").style.fontSize = "25px";
+            document.getElementById("demo").style.color = "red";
+            document.getElementById("demo").style.backgroundColor = "yellow";
+        }
+    </script>
+
+    <button type="button" onclick="myFunction()">点击我！</button>
+
+
+
+    <script>
+        function light(sw) {
+            var pic;
+            if (sw == 0) {
+                pic = "../img/002.jpg"
+            } else {
+                pic = "../img/004.jpg"
+            }
+            document.getElementById('myImage').src = pic;
+        }
+    </script>
+
+    <br />
+
+    <img id="myImage" src="../img/002.jpg" width="109" height="180">
+
+    <p>
+        <button type="button" onclick="light(1)">开灯</button>
+        <button type="button" onclick="light(0)">关灯</button>
+    </p>
+
+</body>
+
+</html>

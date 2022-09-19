@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+
+    <h1>222222222222</h1>
+
+    <canvas id="myCanvas2" width="200" height="100"></canvas>
+
+    <h1>222222222222</h1>
+
+    <canvas id="myCanvas3" width="200" height="100"></canvas>
+    <h1>222222222222</h1>
+
+    <canvas id="myCanvas4" width="200" height="100"></canvas>
+
+</body>
+<script type="text/javascript">
+    var c = document.getElementById("myCanvas");
+    var cxt = c.getContext("2d");
+    cxt.moveTo(10, 10);
+    cxt.lineTo(150, 50);
+    cxt.lineTo(10, 50);
+    cxt.stroke();
+</script>
+
+<script type="text/javascript">
+    var c = document.getElementById("myCanvas2");
+    var cxt = c.getContext("2d");
+    cxt.moveTo(10, 10);//指定义了一个起点，坐标是（20,20）
+    cxt.lineTo(150, 50); //直线10->50
+    cxt.lineTo(10, 50); //直线10->50
+    cxt.stroke();//线条绘制
+</script>
+
+
+<script type="text/javascript">
+
+    var c = document.getElementById("myCanvas3");
+    var cxt = c.getContext("2d");
+    cxt.fillStyle = "#FF0000";
+    cxt.beginPath();
+    //圆心的坐标、弧的圆心半径、圆弧的开始点和结束点、顺逆时针
+    cxt.arc(70, 18, 15, 0, Math.PI * 2, true);
+    cxt.closePath();
+    cxt.fill();
+
+</script>
+
+<script type="text/javascript">
+
+    var c = document.getElementById("myCanvas4");
+    var cxt = c.getContext("2d");
+    var grd = cxt.createLinearGradient(0, 0, 175, 50);
+    grd.addColorStop(0, "#FF0000");
+    grd.addColorStop(1, "#00FF00");
+    cxt.fillStyle = grd;
+    cxt.fillRect(0, 0, 175, 50);
+
+</script>
+
+</html>

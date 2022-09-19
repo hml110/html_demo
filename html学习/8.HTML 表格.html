@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>每个表格由 table 标签开始。</p>
+    <p>每个表格行由 tr 标签开始。</p>
+    <p>每个表格数据由 td 标签开始。</p>
+
+    <table border="2px solid red">
+        <thead align="center">学生成绩表</thead>
+        <tbody align="center">
+            <tr>
+                <th>Heading</th>
+                <th>Another Heading</th>
+                <th>Another Heading</th>
+            </tr>
+            <tr>
+                <td>语文</td>
+                <td>数学</td>
+                <td>英语</td>
+            </tr>
+            <tr>
+                <td>85</td>
+                <td>89</td>
+                <td>90</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table border="2px solid red">
+        <thead align="center">图像表格表</thead>
+        <tbody align="center">
+            <tr>
+                <th>Heading</th>
+                <th>Another Heading</th>
+                <th>Another Heading</th>
+            </tr>
+            <tr>
+                <td>
+                    <img src="img/0001.jpg" width="200px; height=200px" />
+                </td>
+                <td>
+                    <img src="img/0001.jpg" width="200px; height=200px" />
+                </td>
+                <td>
+                    <img src="img/0001.jpg" width="200px; height=200px" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="img/0001.jpg" width="200px; height=200px" />
+                </td>
+                <td>
+                    <img src="img/0001.jpg" width="200px; height=200px" />
+                </td>
+                <td>
+                    <img src="img/0001.jpg" width="200px; height=200px" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h4>横跨两列的单元格：</h4>
+    <table border="1">
+        <tr>
+            <th>姓名</th>
+            <th colspan="2">电话</th>
+        </tr>
+        <tr>
+            <td>Bill Gates</td>
+            <td>555 77 854</td>
+            <td>555 77 855</td>
+        </tr>
+    </table>
+
+
+    <h4>横跨两行的单元格：</h4>
+    <table border="1">
+        <tr>
+            <th>姓名</th>
+            <td>Bill Gates</td>
+        </tr>
+        <tr>
+            <th rowspan="2">电话</th>
+            <td>555 77 854</td>
+        </tr>
+        <tr>
+            <td>555 77 855</td>
+        </tr>
+    </table>
+
+
+
+</body>
+
+</html>
