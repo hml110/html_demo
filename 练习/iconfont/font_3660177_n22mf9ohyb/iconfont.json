@@ -1,0 +1,37 @@
+{
+  "id": "3660177",
+  "name": "test",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "31850943",
+      "name": "icon-person-hezuo1",
+      "font_class": "icon-person-hezuo1",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "31850944",
+      "name": "icon-person-ertong",
+      "font_class": "icon-person-ertong",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "23870326",
+      "name": "复制_copy",
+      "font_class": "fuzhi_copy",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "23870327",
+      "name": "扫码_scan",
+      "font_class": "saoma_scan",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    }
+  ]
+}

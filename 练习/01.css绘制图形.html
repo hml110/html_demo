@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pic {
+            float: left;
+            padding-right: 30px;
+            text-align: center;
+
+        }
+
+        .rec1 {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            background-color: blueviolet;
+        }
+
+        .cir1 {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            background-color: cadetblue;
+            /* 圆角设置为50%即可 */
+            border-radius: 50%;
+        }
+
+        .cir2_1 {
+            /* 上四分之一半圆 */
+            width: 100px;
+            height: 100px;
+            /* 上左边圆角 */
+            border-top-left-radius: 100px;
+            background-color: rgb(243, 146, 9);
+        }
+
+        .cir2_2 {
+            /* 下四分之一半圆 */
+            width: 100px;
+            height: 100px;
+            border-bottom-left-radius: 100px;
+            background-color: rgb(243, 146, 9);
+        }
+
+        .cir3_1 {
+            /* 圆环 */
+            width: 100px;
+            height: 100px;
+            border: 100px solid lightseagreen;
+            border-radius: 100%;
+        }
+
+
+        .oval1 {
+            width: 200px;
+            height: 100px;
+            border: 2px solid black;
+            background-color: deepskyblue;
+            /* 长宽不一致的圆*/
+            border-radius: 50%;
+        }
+
+        .tri1 {
+            /* 正三角形:div的长宽都为0,设置边框左右都透明:transparent,底部不透明*/
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 200px solid rgb(58, 0, 247);
+        }
+
+        .tri2 {
+            /* 倒三角形:div的长宽都为0,设置边框左右都透明:transparent,顶部不透明*/
+            width: 0;
+            height: 0;
+            border-top: 200px solid chocolate;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+        }
+
+        .tri3 {
+            /* 直角三角形:div的长宽都为0,设置边框左右都透明:transparent,底部不透明,边框宽度仅两边有值*/
+            width: 0;
+            height: 0;
+            border-left: 0px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 150px solid darkmagenta;
+        }
+
+        .trap1 {
+            /* 等腰梯形:,设置div的长宽,边框左右都透明:transparent,底部不透明*/
+            width: 100px;
+            height: 100px;
+            border-top: 0px solid black;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 150px solid black;
+        }
+
+        .trap2 {
+            /* 直角梯形:,设置div的长宽,边框左右都透明:transparent,底部不透明*/
+            width: 100px;
+            height: 100px;
+            border-top: 0px solid black;
+            border-left: 0px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 150px solid black;
+        }
+
+        .button1 {
+            width: 200px;
+            height: 100px;
+            border: 2px solid black;
+            background-color: antiquewhite;
+            border-radius: 50px;
+            opacity: 0.8;
+            text-align: center;
+            line-height: 100px;
+            font-size: 24px;
+            font-family: "黑体";
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myContains">
+
+
+        <div class="pic">
+            <h1>绘制正方形</h1>
+            <div class="rec1"></div>
+        </div>
+        <div class="pic">
+            <h1>绘制圆形</h1>
+            <div class="cir1"></div>
+        </div>
+
+        <div class="pic">
+            <h1>绘制半圆</h1>
+            <div class="cir2_1"></div>
+            <div class="cir2_2"></div>
+        </div>
+
+        <div class="pic">
+            <h1>绘制圆环</h1>
+            <div class="cir3_1"></div>
+            <div class="cir3_2"></div>
+        </div>
+
+        <div class="pic">
+            <h1>绘制椭圆</h1>
+            <div class="oval1"></div>
+        </div>
+
+
+        <div class="pic">
+            <h1>绘制正三角形</h1>
+            <div class="tri1"></div>
+        </div>
+
+        <div class="pic">
+            <h1>绘制倒三角形</h1>
+            <div class="tri2"></div>
+        </div>
+
+        <div class="pic">
+            <h1>绘制直角三角形</h1>
+            <div class="tri3"></div>
+        </div>
+
+        <div class="pic">
+            <h1>绘制等腰梯形</h1>
+            <div class="trap1"></div>
+        </div>
+
+        <div class="pic">
+            <h1>绘制直角梯形</h1>
+            <div class="trap2"></div>
+        </div>
+
+
+        <div class="pic">
+            <h1>绘制圆角按钮</h1>
+            <div class="button1">提交</div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

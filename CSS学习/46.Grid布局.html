@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #grid1 {
+            /* 指定一个标签为网格布局的容器 */
+            display: grid;
+            /* 
+            容器指定了Grid布局之后，我们就要对行和列进行划分。
+            grid-template-columns 属性定义每一列的列宽，
+            grid-template-rows 属性定义了每一行的行高。
+             */
+
+            /* 当网格很多的时候，需要重复写同样的值，不方便，可以使用repeat()函数，简化重复的值。上面的代码可以用repeat()改写如下：页面效果相同 
+             grid-template-columns: 200px 100px 100px;
+             repeat(2,100px);
+             */
+            grid-template-columns: 200px repeat(2, 100px);
+
+            /* 有时候单元格的大小是固定的，但是容器的大小不确定。如果希望每一行｜每一列容纳尽可能多的单元格，这时可以使用auto-fill关键字表示自动填充。 */
+            grid-template-columns: repeat(auto-fill, 100px);
+
+            /* 为了方便表示比例关系，网格布局提供了fr关键字。如果两列的宽度分别是1fr和2fr，就表示后者是前者的两倍。 */
+            grid-template-columns: 1fr 2fr;
+
+            /* fr可以与绝对长度的单位结合使用，这时会非常方便 */
+            grid-template-columns: 50px 1fr 2fr;
+
+            /* minmax函数产生一个长度范围，表示长度就在这个范围之中。它接受两个参数，分别为最小值和最大值。 */
+            grid-template-columns: 50px minmax(100px, 200px) 2fr;
+
+            /* auto关键字表示由浏览器自己决定长度。 */
+            grid-template-columns: 100px auto 200px;
+
+            /* row-gap属性设置行与行之间的间隔；column-gap属性设置列与列之间的间隔 */
+            row-gap: 10px;
+            column-gap: 10px;
+
+            /* gap属性是row-gap属性与column-gap属性的合并简写形式（只设置一个值时，row、column值相同）。  */
+            gap: 20px;
+
+            /* 网格布局允许指定“区域”（area），一个区域由多个或单个单元格组成 */
+            grid-template-areas: 'a b c''d e f''g h i';
+
+            /* 设置子元素在容器中排列方式是“先行后列” row；还是“先列后行”column。 */
+            grid-auto-flow: column;
+
+            /* justify-items 属性设置单元格内容的水平位置；align-items 属性设置单元格内容的垂直位置 
+            stretch : 拉伸,默认
+            。 */
+            justify-items: stretch;
+            align-items: stretch;
+
+            /* place-items 属性是justify-items和align-items属性的合并简写形式 */
+            place-items: stretch stretch;
+
+            /* 
+            justify-content 属性是整个内容区域在容器里面的水平位置
+            align-content 属性 是整个内容区域的垂直位置
+            取值：两个属性的取值一致，一个是水平、一个是垂直 
+              justify-content: start | end | center | stretch | space-around | space-between | space-evenly;
+              align-content: start | end | center | stretch | space-around | space-between | space-evenly;  
+            */
+            justify-content: stretch;
+            align-content: stretch;
+
+
+            grid-template-rows: 100px 200px 100px;
+
+            line-height: 100px;
+
+        }
+
+        #grid1 div {
+            border: 1px solid black;
+            background-color: royalblue;
+            font-size: 32px;
+            font-weight: 900;
+            text-align: center;
+            line-height: 100px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="grid1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+
+</body>
+
+</html>

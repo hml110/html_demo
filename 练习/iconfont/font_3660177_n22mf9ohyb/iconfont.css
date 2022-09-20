@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3660177 */
+  src: url('iconfont.woff2?t=1663663781294') format('woff2'),
+       url('iconfont.woff?t=1663663781294') format('woff'),
+       url('iconfont.ttf?t=1663663781294') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon-person-hezuo1:before {
+  content: "\e606";
+}
+
+.icon-icon-person-ertong:before {
+  content: "\e607";
+}
+
+.icon-fuzhi_copy:before {
+  content: "\e618";
+}
+
+.icon-saoma_scan:before {
+  content: "\e619";
+}
+
