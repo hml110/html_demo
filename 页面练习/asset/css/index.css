@@ -1,26 +1,31 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
+
 /* 全局背景 */
-.page{
+
+.page {
     background-color: #F7F7F9;
     width: 100%;
     height: 100%;
     list-style: none;
 }
 
-.iconfont{
-  font-family:"iconfont" !important;
-  font-size:16px;font-style:normal;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
-  -moz-osx-font-smoothing: grayscale;
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
 }
 
+
 /* 顶部边框 */
-.page_head{
+
+.page_head {
     width: 100%;
     height: 50px;
     border: 1px solid red;
@@ -31,8 +36,10 @@
     background-color: #FFFFFF;
 }
 
+
 /* 搜索框 */
-.page_head_search{
+
+.page_head_search {
     width: 220px;
     height: 30px;
     font-family: "黑体";
@@ -47,8 +54,10 @@
     padding-left: 10px;
 }
 
+
 /* 勾选框 */
-.page_head_select{
+
+.page_head_select {
     margin-left: 15px;
     height: 25px;
     border: 1px solid red;
@@ -57,99 +66,107 @@
     align-items: center;
 }
 
-.page_head_select span{
+.page_head_select span {
     font-size: 24px;
     padding-right: 8px;
 }
 
 
 /* icon */
-.page_head_icon{
+
+.page_head_icon {
     margin-left: 25px;
     border: 1px solid red;
 }
 
-.icon-share{ 
+.icon-share {
     margin-left: 10px;
 }
 
+
 /* 导航条 */
-.page_head_navigation{
+
+.page_head_navigation {
     border: 1px solid red;
     font-size: 16px;
     font-weight: bold;
     margin-left: 30px;
 }
+
+
 /* 如果属性不生效，注意各个标签的优先级 */
-#nav_li{
-    border-bottom:2px solid blue;
+
+#nav_li {
+    border-bottom: 2px solid blue;
     color: blue;
 }
 
-
-.page_head_navigation ul li{
+.page_head_navigation ul li {
     padding: 2px;
     display: inline;
+    align-items: stretch;
 }
 
-.page_head_navigation ul li a{
+.page_head_navigation ul li a {
     text-decoration: none;
     color: #58585C;
 }
 
 
 /* 内容区域 */
-.page_content{
-    width: 100%;
-    box-sizing: 800px;
+
+.page_content {
+    width: 80%;
     border: 1px solid red;
 }
 
 
 /* 左边三个内容区域 */
-.page_content_all{
-    width: 80%;
+
+.page_content_all {
     border: 1px solid red;
 }
 
+
 /* 项目介绍区域 */
-.page_content_overview{
+
+.page_content_overview {
     height: 200px;
     border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 30px;
-    flex: 1;
 }
 
-.page_content_overview div{
-    width: 25%;
-    font-size: 14px;
+.page_content_overview_single {
+    width: 40%;
+    border: 1px solid red;
 }
 
-.page_content_overview div p{
-    margin-left: 10px;
-    margin-top: 10px;
+.page_content_overview_single_row {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    border: 1px solid red;
 }
 
-.page_content_overview div p sup{
-    color: red;
+.div1 {
+    width: 100%;
+    text-align: right;
+    border: 1px solid red;
 }
 
-.page_content_overview div p span{
-   padding-left: 15px;
+.div2 {
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    border: 1px solid red;
 }
-
-.color_blue{
-    color: #B3B9F6;
-    text-decoration: underline blue;
-}
-
 
 
 /* 项目成员区域 */
-.page_content_member{
+
+.page_content_member {
     height: 100px;
     border: 1px solid red;
     display: flex;
@@ -157,85 +174,124 @@
     align-items: center;
 }
 
-.page_content_member_title{
+.page_content_member_title {
+    height: 100px;
+    width: 15%;
     font-weight: bold;
-    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
 }
 
 .icon-morentouxiang:before {
- font-size: 32px;
+    font-size: 32px;
     color: #E9E9E9;
 }
 
-.page_content_member_content ul
-{
-   float: left;
-   text-align: center;
+.page_content_member_photo {
+    height: 100px;
+    width: 63%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid red;
 }
 
+.page_content_member_content {
+    width: 12%;
+    height: 100px;
+    border: 1px solid green;
+}
 
-.page_content_member_content ul li
-{
-    margin-left: 20px;
-    margin-top: 5px;
+.page_content_member_content ul {
+    /* border: 1px solid red; */
+}
+
+.page_content_member_content ul li {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 10px;
+    /* border: 1px solid red; */
     list-style: none;
-    
 }
-
-
 
 
 /* 项目账单区域 */
-.page_content_file{
+
+.page_content_file {
     height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
 }
 
-.page_content_file_single{
-    width: 25%;
+.page_content_file_group {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+}
+
+.page_content_file_single {
+    width: 23%;
     height: 100px;
     background-color: #FFFFFF;
-     border: 1px solid red;
-     display: flex;
-     justify-content: center;
-     align-items: center;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.page_content_file_single_left{
+.page_content_file_single_left {
     width: 60%;
-    height: 100%;
-    border: 1px solid red;
-     /* display: flex;
-     justify-content: center;
-     align-items: center; */
+    height: 100px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .page_content_file_single_left div {
+    height: 100px;
     font-size: 24px;
-}
-
-.top1{
-    padding-top: 10px;
-}
-
-.bottom1{
-    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
 }
 
 .page_content_file_single_left span {
     font-size: 16px;
 }
 
-.page_content_file_single_right{
-    height: 100%;
-    text-align: center;
+.page_content_file_single_right {
+    width: 40%;
+    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    border: 1px solid red;
+    align-items: flex-end;
+    /* border: 1px solid red; */
 }
 
-.icon-hetong:before{
+.page_content_file_single_right div {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    /* border: 1px solid red; */
+    align-content: space-between;
+}
+
+.icon-hetong:before {
     font-size: 36px;
     color: #7D8CFE;
     border: 1px solid #7D8CFE;
@@ -247,16 +303,11 @@
 }
 
 
-
-
-
-
-
-
 /* 项目侧边栏区域 */
-.page_content_sidebar{
+
+.page_content_sidebar {
     float: right;
     width: 20%;
-    height:800px;
+    height: 800px;
     border: 1px solid red;
 }
