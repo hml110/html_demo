@@ -16,47 +16,55 @@
     <div class="page">
         <!-- 页面顶部开始 -->
         <div class="page_head">
-            <div>
-                <!-- 搜索框开始 -->
-                <input type="search" class="page_head_search" placeholder="G110北京延庆路段工厂造价10000">
-                <!-- 搜索框结束 -->
-            </div>
-            <!-- 勾选框及条件开始 -->
-            <div class="page_head_select">
-                <div>
-                    <span class="iconfont icon-gouxuankuangyidagou"></span>
+            <!-- 页面顶部左边开始 -->
+            <div class="page_head_left">
+                <div class="page_head_search">
+                    <!-- 搜索框开始 -->
+                    <input type="search" placeholder="G110北京延庆路段工厂造价10000">
+                    <!-- 搜索框结束 -->
                 </div>
-                <div>含未生效单据</div>
+                <!-- 勾选框及条件开始 -->
+                <div class="page_head_select">
+                    <div>
+                        <span class="iconfont icon-gouxuankuangyidagou"></span>
+                    </div>
+                    <div>含未生效单据</div>
+                </div>
+                <!-- 勾选框及条件结束 -->
+                <!-- icon开始 -->
+                <div class="page_head_icon">
+                    <span class="iconfont icon-shuaxin"></span>
+                    <span class="iconfont icon-share"></span>
+                    <span class="iconfont icon-sanjiao1"></span>
+                </div>
+                <!-- icon结束 -->
             </div>
-            <!-- 勾选框及条件结束 -->
-            <!-- icon开始 -->
-            <div class="page_head_icon">
-                <span class="iconfont icon-shuaxin"></span>
-                <span class="iconfont icon-share"></span>
-                <span class="iconfont icon-sanjiao1"></span>
+            <!-- 页面顶部左边结束 -->
+            <!-- 页面顶部右边开始 -->
+            <div class="page_head_right">
+                <!-- 导航条内容开始 -->
+                <div class="page_head_navigation">
+                    <ul>
+                        <li><a id="nav_li" href="#">概览</a></li>
+                        <li><a href="#">团队</a></li>
+                        <li><a href="#">合同</a></li>
+                        <li><a href="#">收入确认</a></li>
+                        <li><a href="#">发票</a></li>
+                        <li><a href="#">开票申请</a></li>
+                        <li><a href="#">其他应收</a></li>
+                        <li><a href="#">应付单</a></li>
+                        <li><a href="#">报销单</a></li>
+                        <li><a href="#">收款</a></li>
+                        <li><a href="#">付款</a></li>
+                        <li><a href="#">分摊单</a></li>
+                        <li><a href="#">工时</a></li>
+                        <li><a href="#">文档</a></li>
+                        <li><a href="#">统计</a></li>
+                    </ul>
+                </div>
+                <!-- 导航条内容结束 -->
             </div>
-            <!-- icon结束 -->
-            <!-- 导航条内容开始 -->
-            <div class="page_head_navigation">
-                <ul>
-                    <li><a id="nav_li" href="#">概览</a></li>
-                    <li><a href="#">团队</a></li>
-                    <li><a href="#">合同</a></li>
-                    <li><a href="#">收入确认</a></li>
-                    <li><a href="#">发票</a></li>
-                    <li><a href="#">开票申请</a></li>
-                    <li><a href="#">其他应收</a></li>
-                    <li><a href="#">应付单</a></li>
-                    <li><a href="#">报销单</a></li>
-                    <li><a href="#">收款</a></li>
-                    <li><a href="#">付款</a></li>
-                    <li><a href="#">分摊单</a></li>
-                    <li><a href="#">工时</a></li>
-                    <li><a href="#">文档</a></li>
-                    <li><a href="#">统计</a></li>
-                </ul>
-            </div>
-            <!-- 导航条内容结束 -->
+            <!-- 页面顶部右边结束 -->
         </div>
         <!-- 页面顶部结束 -->
 
@@ -76,7 +84,7 @@
                         </div>
                         <div class="page_content_overview_single_row">
                             <div class="div1"><sup>*</sup>负责部门：</div>
-                            <div class="div2">010000000001</div>
+                            <div class="div2 text-color">项目部</div>
                         </div>
                         <div class="page_content_overview_single_row">
                             <div class="div1">启动阶段管理：</div>
@@ -88,87 +96,76 @@
                         </div>
                         <div class="page_content_overview_single_row">
                             <div class="div1">项目材料预算：</div>
-                            <div class="div2">1,000,000,00</div>
+                            <div class="div2">1,000,000.00</div>
                         </div>
                     </div>
                     <div class="page_content_overview_single">
                         <div class="page_content_overview_single_row">
-                            <div class="div1"><sup>*</sup>项目编码：</div>
-                            <div class="div2">010000000001</div>
+                            <div class="div1"><sup>*</sup>项目名称：</div>
+                            <div class="div2">G110北京延庆路段工...</div>
                         </div>
                         <div class="page_content_overview_single_row">
-                            <div class="div1"><sup>*</sup>项目分类：</div>
-                            <div class="div2">工厂造价</div>
+                            <div class="div1"><sup>*</sup>项目属性：</div>
+                            <div class="div2">其他</div>
                         </div>
                         <div class="page_content_overview_single_row">
-                            <div class="div1"><sup>*</sup>负责部门：</div>
-                            <div class="div2">010000000001</div>
+                            <div class="div1">负责人：</div>
+                            <div class="div2 text-color">崔明超</div>
                         </div>
                         <div class="page_content_overview_single_row">
-                            <div class="div1">启动阶段管理：</div>
-                            <div class="div2"><span class="iconfont icon-gouxuankuangyidagou"></span></div>
+                            <div class="div1">阶段组：</div>
+                            <div class="div2 text-color">造价阶段组
+                            </div>
                         </div>
                         <div class="page_content_overview_single_row">
-                            <div class="div1">项目总人数：</div>
+                            <div class="div1">自有人数：</div>
                             <div class="div2">8</div>
                         </div>
                         <div class="page_content_overview_single_row">
-                            <div class="div1">项目材料预算：</div>
-                            <div class="div2">1,000,000,00</div>
-                        </div>
-                    </div>
-
-                    <div class="page_content_overview_single">
-                        <div class="page_content_overview_single_row">
-                            <div class="div1"><sup>*</sup>项目编码：</div>
-                            <div class="div2">010000000001</div>
-                        </div>
-                        <div class="page_content_overview_single_row">
-                            <div class="div1"><sup>*</sup>项目分类：</div>
-                            <div class="div2">工厂造价</div>
-                        </div>
-                        <div class="page_content_overview_single_row">
-                            <div class="div1"><sup>*</sup>负责部门：</div>
-                            <div class="div2">010000000001</div>
-                        </div>
-                        <div class="page_content_overview_single_row">
-                            <div class="div1">启动阶段管理：</div>
-                            <div class="div2"><span class="iconfont icon-gouxuankuangyidagou"></span></div>
-                        </div>
-                        <div class="page_content_overview_single_row">
-                            <div class="div1">项目总人数：</div>
-                            <div class="div2">8</div>
-                        </div>
-                        <div class="page_content_overview_single_row">
-                            <div class="div1">项目材料预算：</div>
-                            <div class="div2">1,000,000,00</div>
+                            <div class="div1">主项目：</div>
+                            <div class="div2"></div>
                         </div>
                     </div>
 
                     <div class="page_content_overview_single">
                         <div class="page_content_overview_single_row">
-                            <div class="div1"><sup>*</sup>项目编码：</div>
-                            <div class="div2">010000000001</div>
+                            <div class="div1"><sup>*</sup>业务类型：</div>
+                            <div class="div2">项目</div>
                         </div>
                         <div class="page_content_overview_single_row">
-                            <div class="div1"><sup>*</sup>项目分类：</div>
-                            <div class="div2">工厂造价</div>
+                            <div class="div1">项目分组：</div>
+                            <div class="div2 text-color">房产建筑项目</div>
                         </div>
                         <div class="page_content_overview_single_row">
-                            <div class="div1"><sup>*</sup>负责部门：</div>
-                            <div class="div2">010000000001</div>
+                            <div class="div1">计划开始时间：</div>
+                            <div class="div2">2020-05-01</div>
                         </div>
                         <div class="page_content_overview_single_row">
-                            <div class="div1">启动阶段管理：</div>
-                            <div class="div2"><span class="iconfont icon-gouxuankuangyidagou"></span></div>
+                            <div class="div1">变更时间：</div>
+                            <div class="div2">2020-12-01</div>
                         </div>
                         <div class="page_content_overview_single_row">
-                            <div class="div1">项目总人数：</div>
-                            <div class="div2">8</div>
+                            <div class="div1">说明：</div>
+                            <div class="div2"></div>
+                        </div>
+                    </div>
+
+                    <div class="page_content_overview_single">
+                        <div class="page_content_overview_single_row">
+                            <div class="div1"><sup>*</sup>单据类型：</div>
+                            <div class="div2">项目</div>
                         </div>
                         <div class="page_content_overview_single_row">
-                            <div class="div1">项目材料预算：</div>
-                            <div class="div2">1,000,000,00</div>
+                            <div class="div1">客户：</div>
+                            <div class="div2">中铁十四局集团有限公司</div>
+                        </div>
+                        <div class="page_content_overview_single_row">
+                            <div class="div1"><sup>*</sup>计划结束：</div>
+                            <div class="div2">2021-12-31</div>
+                        </div>
+                        <div class="page_content_overview_single_row">
+                            <div class="div1">变更原因：</div>
+                            <div class="div2"></div>
                         </div>
                     </div>
                 </div>
@@ -187,43 +184,43 @@
                         <div class="page_content_member_content">
                             <ul>
                                 <li class="iconfont icon-morentouxiang"></li>
-                                <li>崔明超</li>
+                                <li>藏伟华</li>
                             </ul>
                         </div>
                         <div class="page_content_member_content">
                             <ul>
                                 <li class="iconfont icon-morentouxiang"></li>
-                                <li>崔明超</li>
+                                <li>岳海全</li>
                             </ul>
                         </div>
                         <div class="page_content_member_content">
                             <ul>
                                 <li class="iconfont icon-morentouxiang"></li>
-                                <li>崔明超</li>
+                                <li>于红强</li>
                             </ul>
                         </div>
                         <div class="page_content_member_content">
                             <ul>
                                 <li class="iconfont icon-morentouxiang"></li>
-                                <li>崔明超</li>
+                                <li>李人庆</li>
                             </ul>
                         </div>
                         <div class="page_content_member_content">
                             <ul>
                                 <li class="iconfont icon-morentouxiang"></li>
-                                <li>崔明超</li>
+                                <li>薛小宁</li>
                             </ul>
                         </div>
                         <div class="page_content_member_content">
                             <ul>
                                 <li class="iconfont icon-morentouxiang"></li>
-                                <li>崔明超</li>
+                                <li>邵旭斌</li>
                             </ul>
                         </div>
                         <div class="page_content_member_content">
                             <ul>
                                 <li class="iconfont icon-morentouxiang"></li>
-                                <li>崔明超</li>
+                                <li>张丽</li>
                             </ul>
                         </div>
                         <div class="page_content_member_content">
@@ -245,7 +242,7 @@
                             </div>
                             <div class="page_content_file_single_right">
                                 <div>
-                                    <span class="iconfont icon-hetong top1"></span>
+                                    <span class="iconfont icon-hetong top1 icon-color1"></span>
                                 </div>
                                 <div class="bottom1">应收合同</div>
                             </div>
@@ -258,7 +255,7 @@
                             </div>
                             <div class="page_content_file_single_right">
                                 <div>
-                                    <span class="iconfont icon-hetong top1"></span>
+                                    <span class="iconfont icon-hetong top1 icon-color2"></span>
                                 </div>
                                 <div class="bottom1">应收合同</div>
                             </div>
@@ -271,7 +268,7 @@
                             </div>
                             <div class="page_content_file_single_right">
                                 <div>
-                                    <span class="iconfont icon-hetong top1"></span>
+                                    <span class="iconfont icon-hetong top1 icon-color3"></span>
                                 </div>
                                 <div class="bottom1">应收合同</div>
                             </div>
@@ -284,7 +281,7 @@
                             </div>
                             <div class="page_content_file_single_right">
                                 <div>
-                                    <span class="iconfont icon-hetong top1"></span>
+                                    <span class="iconfont icon-hetong top1 icon-color4"></span>
                                 </div>
                                 <div class="bottom1">应收合同</div>
                             </div>
@@ -299,7 +296,7 @@
                             </div>
                             <div class="page_content_file_single_right">
                                 <div>
-                                    <span class="iconfont icon-hetong top1"></span>
+                                    <span class="iconfont icon-hetong top1 icon-color1"></span>
                                 </div>
                                 <div class="bottom1">应收合同</div>
                             </div>
@@ -312,7 +309,7 @@
                             </div>
                             <div class="page_content_file_single_right">
                                 <div>
-                                    <span class="iconfont icon-hetong top1"></span>
+                                    <span class="iconfont icon-hetong top1 icon-color2"></span>
                                 </div>
                                 <div class="bottom1">应收合同</div>
                             </div>
@@ -325,7 +322,7 @@
                             </div>
                             <div class="page_content_file_single_right">
                                 <div>
-                                    <span class="iconfont icon-hetong top1"></span>
+                                    <span class="iconfont icon-hetong top1 icon-color3"></span>
                                 </div>
                                 <div class="bottom1">应收合同</div>
                             </div>
@@ -338,7 +335,7 @@
                             </div>
                             <div class="page_content_file_single_right">
                                 <div>
-                                    <span class="iconfont icon-hetong top1"></span>
+                                    <span class="iconfont icon-hetong top1 icon-color4"></span>
                                 </div>
                                 <div class="bottom1">应收合同</div>
                             </div>
@@ -352,7 +349,7 @@
                             </div>
                             <div class="page_content_file_single_right">
                                 <div>
-                                    <span class="iconfont icon-hetong top1"></span>
+                                    <span class="iconfont icon-hetong top1 icon-color1"></span>
                                 </div>
                                 <div class="bottom1">应收合同</div>
                             </div>
@@ -365,7 +362,7 @@
                             </div>
                             <div class="page_content_file_single_right">
                                 <div>
-                                    <span class="iconfont icon-hetong top1"></span>
+                                    <span class="iconfont icon-hetong top1 icon-color2"></span>
                                 </div>
                                 <div class="bottom1">应收合同</div>
                             </div>
@@ -378,7 +375,7 @@
                             </div>
                             <div class="page_content_file_single_right">
                                 <div>
-                                    <span class="iconfont icon-hetong top1"></span>
+                                    <span class="iconfont icon-hetong top1 icon-color3"></span>
                                 </div>
                                 <div class="bottom1">应收合同</div>
                             </div>
@@ -391,7 +388,7 @@
                             </div>
                             <div class="page_content_file_single_right">
                                 <div>
-                                    <span class="iconfont icon-hetong top1"></span>
+                                    <span class="iconfont icon-hetong top1 icon-color4"></span>
                                 </div>
                                 <div class="bottom1">应收合同</div>
                             </div>
@@ -405,7 +402,7 @@
                             </div>
                             <div class="page_content_file_single_right">
                                 <div>
-                                    <span class="iconfont icon-hetong top1"></span>
+                                    <span class="iconfont icon-hetong top1 icon-color1"></span>
                                 </div>
                                 <div class="bottom1">应收合同</div>
                             </div>
@@ -418,7 +415,7 @@
                             </div>
                             <div class="page_content_file_single_right">
                                 <div>
-                                    <span class="iconfont icon-hetong top1"></span>
+                                    <span class="iconfont icon-hetong top1 icon-color2"></span>
                                 </div>
                                 <div class="bottom1">应收合同</div>
                             </div>
@@ -431,7 +428,7 @@
                             </div>
                             <div class="page_content_file_single_right">
                                 <div>
-                                    <span class="iconfont icon-hetong top1"></span>
+                                    <span class="iconfont icon-hetong top1 icon-color3"></span>
                                 </div>
                                 <div class="bottom1">应收合同</div>
                             </div>
@@ -444,7 +441,7 @@
                             </div>
                             <div class="page_content_file_single_right">
                                 <div>
-                                    <span class="iconfont icon-hetong top1"></span>
+                                    <span class="iconfont icon-hetong top1 icon-color4"></span>
                                 </div>
                                 <div class="bottom1">应收合同</div>
                             </div>
@@ -452,11 +449,115 @@
                     </div>
                 </div>
                 <!-- 项目账单区域结束 -->
-
-
-                <!-- 页面内容结束 -->
             </div>
+            <!-- 页面内容结束 -->
+            <!-- 页面侧边栏区域开始 -->
+            <div class="page_content_sidebar">
+                <div class="page_content_sidebar_single">
+                    <div class="page_content_sidebar_single_top">
+                        造价方案及付款
+                    </div>
+                    <div class="page_content_sidebar_single_bottom">
+                        <div class="page_content_sidebar_single_bottom_one">
+                            <div>状态：</div>
+                            <div><span class="iconfont icon-shijian"></span><span class="single_color">距离结束8天</span>
+                            </div>
+                        </div>
+                        <div class="page_content_sidebar_single_bottom_one">
+                            <div>计划：</div>
+                            <div>2020/12/03-2020/12/31</div>
+                        </div>
+                        <div class="page_content_sidebar_single_bottom_one">
+                            <div>执行：</div>
+                            <div><span class="iconfont icon-shijian"></span>2020/12/03-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page_content_sidebar_single">
+                    <div class="page_content_sidebar_single_top">
+                        提交概算资料
+                    </div>
+                    <div class="page_content_sidebar_single_bottom">
+                        <div class="page_content_sidebar_single_bottom_one">
+                            <div>状态：</div>
+                            <div><span class="iconfont icon-shijian"></span><span class="single_color">距离结束8天</span>
+                            </div>
+                        </div>
+                        <div class="page_content_sidebar_single_bottom_one">
+                            <div>计划：</div>
+                            <div>2020/12/03-2020/12/31</div>
+                        </div>
+                        <div class="page_content_sidebar_single_bottom_one">
+                            <div>执行：</div>
+                            <div><span class="iconfont icon-shijian"></span>2020/12/03-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page_content_sidebar_single">
+                    <div class="page_content_sidebar_single_top">
+                        提交概算资料
+                    </div>
+                    <div class="page_content_sidebar_single_bottom">
+                        <div class="page_content_sidebar_single_bottom_one">
+                            <div>状态：</div>
+                            <div><span class="iconfont icon-shijian"></span><span class="single_color">距离结束8天</span>
+                            </div>
+                        </div>
+                        <div class="page_content_sidebar_single_bottom_one">
+                            <div>计划：</div>
+                            <div>2020/12/03-2020/12/31</div>
+                        </div>
+                        <div class="page_content_sidebar_single_bottom_one">
+                            <div>执行：</div>
+                            <div><span class="iconfont icon-shijian"></span>2020/12/03-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page_content_sidebar_single">
+                    <div class="page_content_sidebar_single_top">
+                        提交概算资料
+                    </div>
+                    <div class="page_content_sidebar_single_bottom">
+                        <div class="page_content_sidebar_single_bottom_one">
+                            <div>状态：</div>
+                            <div><span class="iconfont icon-shijian"></span><span class="single_color1">距离结束8天</span>
+                            </div>
+                        </div>
+                        <div class="page_content_sidebar_single_bottom_one">
+                            <div>计划：</div>
+                            <div>2020/12/03-2020/12/31</div>
+                        </div>
+                        <div class="page_content_sidebar_single_bottom_one">
+                            <div>执行：</div>
+                            <div><span class="iconfont icon-shijian"></span>2020/12/03-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page_content_sidebar_single">
+                    <div class="page_content_sidebar_single_top">
+                        提交概算资料
+                    </div>
+                    <div class="page_content_sidebar_single_bottom">
+                        <div class="page_content_sidebar_single_bottom_one">
+                            <div>状态：</div>
+                            <div><span class="iconfont icon-shijian"></span><span class="single_color2">距离结束8天</span>
+                            </div>
+                        </div>
+                        <div class="page_content_sidebar_single_bottom_one">
+                            <div>计划：</div>
+                            <div>2020/12/03-2020/12/31</div>
+                        </div>
+                        <div class="page_content_sidebar_single_bottom_one">
+                            <div>执行：</div>
+                            <div><span class="iconfont icon-shijian"></span>2020/12/03-</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 页面侧边栏区域结束 -->
             <!-- 整个页面结束 -->
+        </div>
+    </div>
 </body>
 
 </html>

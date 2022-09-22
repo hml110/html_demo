@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 显示消息内容 -->
+        {{message}}
+    </div>
+
+    <div id="app-2">
+        <!-- 执行绑定，span的title属性 -->
+        <span v-bind:title="message">
+            鼠标悬停几秒钟查看此处动态绑定的提示信息！
+        </span>
+
+    </div>
+
+    <div id="app-3">
+        <p v-if="seen">现在你看到我了</p>
+    </div>
+
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{todo.text}}
+            </li>
+        </ol>
+    </div>
+
+</body>
+<script>
+
+    var app4 = new Vue({
+        el: '#app-4',
+        data: {
+            todos: [
+                { text: '123' },
+                { text: '456' },
+                { text: '789' },
+                { text: '101112' }
+            ]
+        }
+    })
+
+    var app3 = new Vue({
+        el: '#app-3',
+        data: {
+            seen: true
+        }
+    })
+
+
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello!'
+        }
+    });
+
+    var app2 = new Vue({
+        el: '#app-2',
+        data: {
+            message: '页面加载于!  ' + new Date().toLocaleString()
+        }
+    });
+
+</script>
+
+</html>
