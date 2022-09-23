@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app1">
+        <span>Message: {{ msg }}</span>
+
+        <span v-once>Message: {{ msg }}</span>
+    </div>
+
+    <hr />
+
+    <div id="app2">
+        <p>Using mustaches: {{ rawHtml }}</p>
+        <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+    </div>
+    <hr />
+    <div id="app3">
+        <div v-bind:id="dynamicId">xxxxxx</div>
+        <button v-bind:disabled="isButtonDisabled">Button</button>
+    </div>
+    <hr />
+    <div id="app4">
+        {{ number + 1 }}<br />
+
+        {{ ok ? 'YES' : 'NO' }}<br />
+
+        {{ message.split('').reverse().join('') }}<br />
+
+        <div v-bind:id="'list-' + id"></div>
+    </div>
+
+    <hr />
+    <div id="app5">
+        <a v-bind:href="url">点击</a>
+        <a v-on:click="doSomething">点击弹窗</a>
+    </div>
+
+
+    <hr />
+    <div id="app6">
+        <a v-bind:[attributeName]="url">hsdhhhh </a>
+        <a v-on:[eventName]="doSomething"> xxxxxx </a>
+    </div>
+
+    <hr />
+    <div id="app7">
+        <form v-on:submit.prevent="onSubmit">
+            <input type="submit" value="提交">
+        </form>
+    </div>
+
+
+
+</body>
+<script>
+    var app6 = new Vue({
+        el: '#app6',
+        data: {
+
+        },
+        methods: {
+            onSubmit: function () {
+                alert("submit.prevent");
+            }
+        }
+    })
+
+
+
+    var app6 = new Vue({
+        el: '#app6',
+        data: {
+            url: 'file:///D:/My%20code/html_demo/vue%E5%AD%A6%E4%B9%A0/5.%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95.html'
+
+        },
+        methods: {
+            doSomething: function () {
+                alert("hello");
+            },
+            attributeName: function () {
+                return { attributeName: "href" }
+            },
+            attributeName: function () {
+                return { eventName: "focus" }
+            }
+        }
+    })
+
+
+
+
+
+
+    var app5 = new Vue({
+        el: '#app5',
+        data: {
+            url: 'file:///D:/My%20code/html_demo/vue%E5%AD%A6%E4%B9%A0/5.%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95.html'
+        },
+        methods: {
+            doSomething: function () {
+                alert("hello");
+            }
+        }
+    })
+
+
+
+    var app4 = new Vue({
+        el: '#app4',
+        data: {
+            number: 1,
+            ok: false,
+            message: 'hello',
+            id: 1001
+
+        }
+    })
+
+    var app3 = new Vue({
+        el: '#app3',
+        data: {
+            dynamicId: 'test_001',
+            isButtonDisabled: false
+        }
+    })
+
+
+    var app2 = new Vue({
+        el: '#app2',
+        data: {
+            rawHtml: '<span style="color:red">hello,world!</span>'
+        }
+    })
+
+
+
+
+    var app1 = new Vue({
+        el: '#app1',
+        data: {
+            msg: 'hello'
+        }
+    })
+</script>
+
+</html>

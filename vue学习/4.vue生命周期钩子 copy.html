@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 比如 created 钩子可以用来在一个实例被创建之后执行代码：
+    new Vue({
+        data: {
+            a: 1
+        },
+        created: function () {
+            console.log("Vue实列对象创建：")
+            // `this` 指向 vm 实例
+            console.log('a.is' + this.a);
+            alert(this.a);
+        }
+    })
+</script>
+
+</html>

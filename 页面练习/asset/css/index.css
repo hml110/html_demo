@@ -3,13 +3,18 @@
     margin: 0;
 }
 
+/* 
+div>div>div {
+    border: 1px red solid;
+} */
+
 
 /* 全局背景 */
 
 .page {
     background-color: #F7F7F9;
-    width: 100%;
-    height: 100%;
+    width: 98vw;
+    height: 100vh;
     list-style: none;
     font-family: "黑体";
     font-size: 12px;
@@ -29,57 +34,69 @@
 
 .page_head {
     width: 100%;
-    height: 50px;
-    /*border: 1px solid red;*/
+    height: 10%;
+    /* border: 1px solid red; */
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    background-color: #FFFFFF;
+    background-color: #F7F7F9;
 }
 
 .page_head_left {
     width: 40%;
-    /*border: 1px solid red;*/
+    height: 80%;
+    /* border: 1px solid red; */
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    background-color: #F7F7F9;
 }
+
+
 
 .page_head_right {
     width: 60%;
-    /*border: 1px solid red;*/
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+
 }
 
 
 /* 搜索框 */
 
 .page_head_search {
-    width: 32%;
+    width: 35%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /*border: 1px solid red;*/
+    /* border: 1px solid red; */
+    background-color: #FFFFFF;
 }
 
 .page_head_search input {
     font-size: 12px;
-    /* 文本不换行 */
+    /*文本不换行*/
     white-space: nowrap;
-    /* 超出显示:... */
+    /*超出显示:;
+    */
     text-overflow: ellipsis;
-    /* 过长隐藏 */
+    /*过长隐藏*/
     overflow: hidden;
-    /* padding-left: 10px; */
 }
 
 
 /* 勾选框 */
 
 .page_head_select {
-    width: 30%;
+    width: 25%;
+    height: 100%;
     /*border: 1px solid red;*/
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -91,8 +108,12 @@
 /* icon */
 
 .page_head_icon {
-    width: 30%;
-    /*border: 1px solid red;*/
+    width: 40%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 
@@ -101,7 +122,8 @@
 .page_head_navigation {
     /*border: 1px solid red;*/
     font-size: 14px;
-    /* font-weight: bold; */
+    width: 100%;
+
 }
 
 
@@ -129,7 +151,8 @@
 
 .page_content {
     width: 100%;
-    border: 1px solid red;
+    height: 90%;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,23 +164,30 @@
 .page_content_all {
     width: 80%;
     height: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
 /* 项目介绍区域 */
 
 .page_content_overview {
-    height: 160px;
-    border: 1px solid black;
+    width: 98%;
+    height: 35%;
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    background-color: #FFFFFF;
 }
 
 .page_content_overview_cloumn {
+    width: 100%;
     /* border: 1px solid red; */
-    height: 22px;
+    height: 20px;
     display: flex;
     justify-content: space-around;
     align-items: baseline;
@@ -165,21 +195,22 @@
 
 .page_content_overview_cloumn_one {
     height: 100%;
-    width: 20%;
+    width: 25%;
     /* border: 1px solid red; */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-items: baseline;
 }
 
 .page_content_overview_cloumn_one_left {
-    width: 40%;
+    width: 42%;
     text-align: right;
 }
 
 .page_content_overview_cloumn_one_right {
-    width: 60%;
-    padding-left: 10px;
+    padding-left: 5px;
+    width: 58%;
+
 }
 
 sup {
@@ -195,15 +226,17 @@ sup {
 /* 项目成员区域 */
 
 .page_content_member {
-    height: 80px;
-    border: 1px solid red;
+    width: 98%;
+    height: 13%;
+    border-top: 5px solid #F7F7F9;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
+    background-color: #FFFFFF;
 }
 
 .page_content_member_title {
-    height: 70px;
+    height: 100%;
     width: 10%;
     font-weight: bold;
     display: flex;
@@ -213,22 +246,23 @@ sup {
 }
 
 .icon-morentouxiang:before {
-    font-size: 48px;
+    font-size: 32px;
     color: #7E7E81;
 }
 
 .page_content_member_photo {
-    height: 70px;
-    width: 63%;
+    height: 100%;
+    width: 90%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     /*border: 1px solid red;*/
 }
 
 .page_content_member_content {
-    width: 12%;
-    height: 80px;
+    width: 6%;
+    height: 100%;
+
     /* border: 1px solid green; */
 }
 
@@ -244,105 +278,170 @@ sup {
 .page_content_member_content ul li {
     display: flex;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     /* border: 1px solid red; */
     list-style: none;
 }
 
 
 /* 项目账单区域 */
-
 .page_content_file {
-    height: 500px;
+    height: 52%;
+    width: 98%;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: space-around;
+    /* border: 1px solid red; */
+    background-color: #F7F7F9;
+}
+
+.icon-hetong::before {
+    font-size: 30px;
+    border: 1px solid #808FFC;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    /* background-color: #0698f3; */
+}
+
+
+.page_content_file_group {
+    height: 100%;
+    width: 24%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    align-content: space-around;
     /* border: 1px solid red; */
+
 }
 
-.page_content_file_group {
-    height: 100px;
+.page_content_file_group_row {
     width: 100%;
+    height: 20%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-
-.page_content_file_single {
-    width: 23%;
-    height: 100px;
-    background-color: #FFFFFF;
     /* border: 1px solid red; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #FFFFFF;
 }
 
-.page_content_file_single_left {
+.page_content_file_group_row_left {
     width: 60%;
-    height: 100px;
-    /* /*border: 1px solid red;*/
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    align-content: center;
+    /* border: 1px solid red; */
 }
 
-.page_content_file_single_left div {
-    height: 100px;
-    font-size: 24px;
+.page_content_file_group_row_left span {
+    font-size: 12px;
+
+}
+
+.page_content_file_group_row_left_top {
+    width: 100%;
+    height: 50%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: space-between;
-}
-
-.page_content_file_single_left span {
+    justify-content: flex-start;
+    align-items: baseline;
+    /* border: 1px solid red; */
     font-size: 16px;
 }
 
-.page_content_file_single_right {
+
+.page_content_file_group_row_left_bottom {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.page_content_file_group_row_right {
     width: 35%;
-    height: 100px;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    /*border: 1px solid red;*/
+    justify-content: flex-end;
+    align-items: center;
+    /* border: 1px solid red; */
 }
 
-.page_content_file_single_right div {
-    height: 100px;
+
+.page_content_file_group_row_right_top {
+    width: 100%;
+    height: 70%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
-    /*border: 1px solid red;*/
-    align-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
 }
 
-.icon-hetong:before {
-    font-size: 36px;
-    /* color: #7D8CFE; */
-    border: 2px solid;
-    border-radius: 50%;
+.page_content_file_group_row_right_bottom {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
 }
+
+
+
 
 .icon-color1 {
-    color: #7F8FFC;
+    /*color: #7F8FFC;
+    */
+    color: white;
+    background-color: #8694FC;
+    border: 1px solid;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .icon-color2 {
-    color: #6DD5E5;
+    color: white;
+    background-color: #6DD5E5;
+    border: 1px solid;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .icon-color3 {
-    color: #BA89FB;
+    color: white;
+    background-color: #BA89FB;
+    border: 1px solid;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .icon-color4 {
-    color: #58BDFE;
+    color: white;
+    background-color: #58BDFE;
+    border: 1px solid;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 
@@ -350,19 +449,19 @@ sup {
 
 .page_content_sidebar {
     width: 20%;
-    height: 800px;
+    height: 100%;
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    align-content: space-around;
     font-size: 14px;
 }
 
 .page_content_sidebar_single {
-    width: 90%;
-    height: 150px;
-    /* border: 1px solid red; */
+    width: 95%;
+    height: 19%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -372,7 +471,7 @@ sup {
 
 .page_content_sidebar_single_top {
     width: 90%;
-    height: 60px;
+    height: 40%;
     font-weight: bolder;
     /* border: 1px solid red; */
     display: flex;
@@ -383,7 +482,7 @@ sup {
 
 .page_content_sidebar_single_bottom {
     width: 90%;
-    height: 100px;
+    height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -392,6 +491,8 @@ sup {
 }
 
 .page_content_sidebar_single_bottom_one {
+    width: 100%;
+    height: 33%;
     display: flex;
     justify-content: baseline;
     align-items: center;
