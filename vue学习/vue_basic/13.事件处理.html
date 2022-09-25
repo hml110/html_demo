@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13.事件处理</title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h1>{{msg}}</h1>
+        <button v-on:click="showInfo1">点我提示信息1</button>
+        <button v-on:click="showInfo2">点我提示信息2</button>
+        <button @click="showInfo3(66,$event)">点我提示信息3</button>
+        <button @click="showInfo4(88,$event)">点我提示信息4</button>
+    </div>
+    <script>
+        Vue.config.productionTip = false;//阻止生产提示
+
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                msg: "AAAAAAAAA",
+                showInfo4(number, event) {
+                    console.log(vm);
+                    alert("你好！！" + number)
+                    console.log(event.target)
+                    console.log(event.target.innerText)
+                }
+            },
+            methods: {
+                showInfo1(event) {
+                    console.log(vm);
+                    console.log(event.target);
+                    console.log(event.target.innerText);
+                    console.log(this); //此次的this是vm
+                    console.log(this === vm); //true
+                },
+                showInfo2: (event) => {
+                    console.log(this); //此次的this是windows
+                },
+                showInfo3(number, event) {
+                    alert("你好！！" + number)
+                    console.log(event.target)
+                    console.log(event.target.innerText)
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>18.侦听属性</title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h2>今天天气{{info}}</h2>
+        <button @click="changerWeather">切换天气</button>
+        <hr />
+        <h3>a的值是:{{numbers.a}}</h3>
+        <button @click="numbers.a++">a++</button>
+        <hr />
+        <h3>b的值是:{{numbers.b}}</h3>
+        <button @click="numbers.b++">b++</button>
+        <button @click="numbers = {a:666,b:888}">彻底改变ab</button>
+    </div>
+    <script>
+        Vue.config.productionTip = false;//阻止生产提示
+
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                isHot: true,
+                numbers: {
+                    a: 1,
+                    b: 1
+                }
+            },
+            computed: {
+                info() {
+                    return this.isHot ? "炎热" : "不炎热";
+                }
+            },
+            methods: {
+                changerWeather() {
+                    this.isHot = !this.isHot;
+                }
+            },
+            //监视属性
+            watch: {
+                isHot: {
+                    //初始化时让handler调用一下
+                    immediate: true,
+                    //handler什么时候调用？当isHot发生改变时
+                    handler(newValue, oldValue) {
+                        console.log("isHot被改变了", newValue, oldValue);
+                    }
+                },
+                //监视多级结构这某个属性的变化
+                // 'numbers.a': {
+                //     //初始化时让handler调用一下
+                //     immediate: true,
+                //     handler(newValue, oldValue) {
+                //         console.log(" numbers被改变了", newValue, oldValue);
+                //     }
+                // },
+                //监视多级结构这所有属性的变化
+                numbers: {
+                    //深度监视开启
+                    deep: true,
+                    //初始化时让handler调用一下
+                    immediate: true,
+                    handler() {
+                        console.log(" numbers被改变了");
+                    }
+                },
+            }
+        });
+    </script>
+</body>
+
+</html>

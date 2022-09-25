@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12.数据代理</title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+    <!-- 数据代理：通过一个对象代理对另一个对象中属性的操作（读/写） -->
+    <div id="root">
+        <h2>学校名称：{{ name }}</h2>
+        <h2>学校地址：{{ address }}</h2>
+    </div>
+    <script>
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                name: '电子科技大学',
+                address: '成都'
+            }
+        })
+        console.log(vm);
+
+
+        let obj1 = { x: 200 }
+        let obj2 = { y: 300 }
+
+        Object.defineProperty(obj2, 'x', {
+            get() {
+                return obj1.x
+            },
+            set(value) {
+                obj1.x = value
+            }
+        })
+    </script>
+</body>
+
+</html>

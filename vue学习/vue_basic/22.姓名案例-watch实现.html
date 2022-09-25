@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>22.姓名案例-watch实现</title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <!-- 计算属性实现 -->
+        姓：<input type="text" v-model="firstName"> <br />
+        名：<input type="text" v-model="lastName"> <br />
+        全名：<span>{{fullName}}</span><br />
+    </div>
+    <script>
+        Vue.config.productionTip = false;//阻止生产提示
+
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                firstName: '张',
+                lastName: '三',
+                fullName: '张-三'
+            },
+            watch: {
+                firstName(newValue) {
+                    setTimeout(() => {
+                        console.log(this);
+                        this.fullName = newValue + '-' + this.lastName;
+                    }, 1000);
+                },
+                lastName(newValue) {
+                    this.fullName = this.firstName + '-' + newValue;
+                }
+            },
+            methods: {
+            }
+        });
+    </script>
+</body>
+
+</html>

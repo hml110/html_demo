@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>15.键盘事件</title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h2>欢迎打开{{name}}</h2>
+        <input type="text" placeholder="按下回车提示输入" @keyup.enter="showInfo"><br />
+        <input type="text" placeholder="按下tab提示输入" @keydown.tab="showInfo"><br />
+        <input type="text" placeholder="按下回车提示输入" @keydown.huiche="showInfo"><br />
+    </div>
+    <script>
+        Vue.config.productionTip = false;//阻止生产提示
+
+        Vue.config.keyCodes.huiche = 13		// 定义了一个别名按键
+
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                name: "AAA"
+
+            },
+            methods: {
+                showInfo(e) {
+                    console.log(e.keyCode)
+                    //  console.log(e.target.value)//输出输入框的值
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>16.计算属性</title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <!-- 计算属性实现 -->
+        姓：<input type="text" v-model="firstName"> <br />
+        名：<input type="text" v-model="lastName"> <br />
+        全名：<span>{{fullName}}</span><br />
+        全名：<span>{{fullName}}</span><br />
+        全名：<span>{{fullName}}</span><br />
+        全名：<span>{{fullName1}}</span><br />
+    </div>
+    <script>
+        Vue.config.productionTip = false;//阻止生产提示
+
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                firstName: '张',
+                lastName: '三'
+            },
+            computed: {
+                fullName: {
+                    get() {
+                        //get有什么作用？当有人读取fullName时，get()就会被调用，并且返回值作为fullName的值
+                        console.log("fullName.get()被调用了")
+                        console.log("此次的this是vm");
+                        return this.firstName + "-" + this.lastName
+                    },
+                    //set()什么时候被调用?当fullName被修改时候
+                    set(value) {
+                        console.log("fullName.set()被调用了")
+                        console.log('set', value);
+                        //拆分
+                        const arr = value.split('-')
+                        this.firstName = arr[0]
+                        this.lastName = arr[1]
+                    }
+                },
+
+                // 简写形式  
+                fullName1() {
+                    console.log('get被调用了')
+                    return this.firstName + '-' + this.lastName
+                }
+            },
+            methods: {
+            }
+        })
+    </script>
+</body>
+
+</html>
