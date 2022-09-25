@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./js/vue.js"></script>
+    <script src="../js/vue.js"></script>
 </head>
 
 <body>
@@ -29,11 +29,7 @@
     </div>
     <hr />
     <div id="app4">
-        {{ number + 1 }}<br />
-
-        {{ ok ? 'YES' : 'NO' }}<br />
-
-        {{ message.split('').reverse().join('') }}<br />
+        {{ number + 1 }}<br /> {{ ok ? 'YES' : 'NO' }}<br /> {{ message.split('').reverse().join('') }}<br />
 
         <div v-bind:id="'list-' + id"></div>
     </div>
@@ -68,7 +64,7 @@
 
         },
         methods: {
-            onSubmit: function () {
+            onSubmit: function() {
                 alert("submit.prevent");
             }
         }
@@ -83,14 +79,18 @@
 
         },
         methods: {
-            doSomething: function () {
+            doSomething: function() {
                 alert("hello");
             },
-            attributeName: function () {
-                return { attributeName: "href" }
+            attributeName: function() {
+                return {
+                    attributeName: "href"
+                }
             },
-            attributeName: function () {
-                return { eventName: "focus" }
+            attributeName: function() {
+                return {
+                    eventName: "focus"
+                }
             }
         }
     })
@@ -106,7 +106,7 @@
             url: 'file:///D:/My%20code/html_demo/vue%E5%AD%A6%E4%B9%A0/5.%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95.html'
         },
         methods: {
-            doSomething: function () {
+            doSomething: function() {
                 alert("hello");
             }
         }

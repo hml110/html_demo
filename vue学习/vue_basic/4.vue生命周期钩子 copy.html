@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./js/vue.js"></script>
+    <script src="../js/vue.js"></script>
 </head>
 
 <body>
@@ -18,9 +18,9 @@
         data: {
             a: 1
         },
-        created: function () {
+        created: function() {
             console.log("Vue实列对象创建：")
-            // `this` 指向 vm 实例
+                // `this` 指向 vm 实例
             console.log('a.is' + this.a);
             alert(this.a);
         }
