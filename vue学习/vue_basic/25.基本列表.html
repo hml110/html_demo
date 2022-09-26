@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>25.基本列表</title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h2>人员列表</h2>
+        <ul>
+            <li v-for="p in persons" :key="p.id">{{p.name}}-{{p.age}}</li>
+        </ul>
+
+        <ul>
+            <li v-for="(p,index) in persons" :key="index">{{index}}---{{p.name}}---{{p.age}}</li>
+        </ul>
+
+        <ul>
+            <li v-for="(p,index) of persons" :key="index">{{index}}---{{p.name}}---{{p.age}}</li>
+        </ul>
+
+        <!-- 遍历对象 -->
+        <ul>
+            <li v-for="(a,b,index) in car">
+                {{a}} ---{{b}}---{{index}}
+            </li>
+        </ul>
+
+        <ul>
+            <li v-for="(a,b,index) in car" :key="b">
+                {{index}}--{{b}}--{{a}}
+            </li>
+        </ul>
+
+        <!-- 遍历字符串 -->arr
+        <ul>
+            <li v-for="(a,b) in str">
+                {{a}} ---{{b}}
+            </li>
+        </ul>
+
+        <ul>
+            <li v-for="(a,index) in str" :key="index">
+                {{index}} ---{{a}}
+            </li>
+        </ul>
+
+        <!-- 遍历指定次数 -->
+        <ul>
+            <li v-for="(number,index) in 5" ::key="index">
+                {{index}} ---{{number}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        Vue.config.productionTip = false;//阻止生产提示
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                persons: [
+                    { id: '001', name: '张三', age: '20' },
+                    { id: '002', name: '李四', age: '25' },
+                    { id: '003', name: '王五', age: '24' },
+                ],
+                car: {
+                    id: '001',
+                    name: '奥迪',
+                    price: '70万'
+                },
+                str: 'hello'
+            },
+            methods: {
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30.vue数据监测的原理</title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h1>学校信息</h1>
+        <h2>学校名称：{{name}}</h2>
+        <h2>学校地址：{{address}}</h2>
+        <h2>学校校长：{{leader}}</h2>
+        <hr />
+        <h1>学生信息</h1>
+        <button @click="addSex">点击添加性别信息</button>
+        <h2>姓名：{{student.name}}</h2>
+        <h2>年龄：{{student.age.rAge}}</h2>
+        <h2 v-if="student.sex">性别：{{student.sex}}</h2>
+        <button @click="addHobby">点击添加一个爱好</button>
+        <h2>爱好
+            <ul>
+                <li v-for="(h,index) in student.hobby">
+                    {{h}}
+                </li>
+            </ul>
+        </h2>
+        <hr />
+        <h2>朋友们</h2>
+        <ul>
+            <li v-for="(f,index) in student.friends">
+                {{f.name}} ---{{f.age}}
+            </li>
+        </ul>
+
+    </div>
+    <script>
+        Vue.config.productionTip = false;//阻止生产提示
+
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                name: 'xx一中',
+                address: 'localhost',
+                leader: 'xxx',
+                student: {
+                    name: 'Student',
+                    age: {
+                        rAge: 40,
+                        fAge: 30
+                    },
+                    hobby: ['抽烟', '喝酒', '打架']
+                    ,
+                    friends: [
+                        {
+                            name: 'Male',
+                            age: 24
+                        },
+                        {
+                            name: 'Female',
+                            age: 28
+                        }
+                    ]
+                }
+            },
+            methods: {
+                addSex() {
+                    vm.$set(this.student, 'sex', '男');
+                    // this.$set(this.student, 'sex', '男');
+                    // Vue.$set(this.student, 'sex', '男');
+                },
+                addHobby() {
+                    this.student.hobby.push("打球")
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
