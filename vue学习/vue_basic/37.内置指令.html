@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>37.内置指令</title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h2>sds：{{name}}</h2>
+        <p v-text="str">sds：</p>
+        <p v-html="str">sds：</p>
+
+        <p v-cloak="str">sds：</p>
+
+        <h2>当前的n值是：{{n}}</h2>
+        <h2 v-once>初始化n值是：{{n}}</h2>
+        <button @click="n++">点我n+1</button>
+
+        <hr />
+        <h2 v-pre>Vue其实很简单</h2>
+        <h2>当前的n值是:{{n}}</h2>
+        <button @click="n++">点我n+1</button>
+
+
+    </div>
+    <script>
+        Vue.config.productionTip = false;//阻止生产提示
+
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                str: '<h3>sds</h3>',
+                n: 1,
+            },
+            methods: {
+            }
+        });
+    </script>
+</body>
+
+</html>

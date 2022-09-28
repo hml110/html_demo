@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>41.引出生命周期</title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root" :x="n">
+        <!-- <h2 v-text="n"></h2>
+        <h2>当前的n值是：{{ n }}</h2>
+        <button @click="add">点我n+1</button>
+        <button @click=" my_Destroy">点我销毁vm</button> -->
+    </div>
+    <script>
+        Vue.config.productionTip = false;//阻止生产提示
+
+        const vm = new Vue({
+            el: '#root',
+            template:
+                `
+                <div>
+                    <h2 v-text="n"></h2>
+                    <h2>当前的n值是：{{ n }}</h2>
+                    <button @click="add">点我n+1</button>
+                    <button @click=" my_Destroy">点我销毁vm</button>
+                </div>
+               `
+            ,
+            data: {
+                n: 1
+            },
+            methods: {
+                add() {
+                    console.log('add()');
+                    this.n++;
+                },
+                my_Destroy() {
+                    console.log('my_Destroy()');
+                    this.$destroy()
+                }
+            },
+            beforeCreate() {
+                console.log('beforeCreate()');
+                console.log(this);
+                // debugger;   //添加断点
+            },
+            created() {
+                console.log('created()');
+                console.log(this);
+                // debugger;
+            },
+            beforeMount() {
+                console.log('beforeMount()');
+                console.log(this);
+                // debugger;
+            },
+            mounted() {
+                console.log('mounted()');
+                console.log(this);
+                document.querySelector('h2').innerText = 'strong'
+                // debugger;
+            },
+
+            //在此生命周期页面和数据未保持同步
+            beforeUpdate() {
+                console.log('beforeUpdate()');
+                console.log(this);
+                // debugger;
+            },
+            updated() {
+                console.log('updated()');
+                console.log(this.n);
+                // debugger;
+            },
+            beforeDestroy() {
+                //到这里对所有的数据修改已经不更新页面了
+                console.log('beforeDestroy()');
+                this.add()
+                console.log(this.n);
+                // debugger;
+            },
+            destroyed() {
+                console.log('destroyed()');
+                this.add()
+                console.log(this.n);
+            },
+        });
+    </script>
+</body>
+
+</html>

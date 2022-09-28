@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>45.组件化编程-组件嵌套</title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+    <script>
+        Vue.config.productionTip = false;//阻止生产提示
+
+        //定义student组件
+        const student = Vue.extend({
+            template: `
+				<div>
+					<h3>学生名称：{{name}}</h3>	
+					<h3>学生年龄：{{age}}</h3>	
+				</div>
+			`,
+            data() {
+                return {
+                    name: '小王',
+                    age: 25
+                }
+            }
+        });
+
+        //定义school组件
+        const school = Vue.extend({
+            // 注册给谁就在谁的模板里面使用组件
+            template: `
+				<div>
+					<h3>学校名称：{{name1}}</h3>	
+					<h3>学校地址：{{address}}</h3>	
+                    <student></student>
+				</div>
+			`,
+            data() {
+                return {
+                    name1: '电子科技大学',
+                    address: '成都'
+                }
+            },
+            // 局部注册
+            components: {
+                student
+            }
+        });
+
+
+        //定义hello组件
+        const hello = Vue.extend({
+            template: `
+
+            <h3>{{msg}}</h3>
+           
+            `,
+            data() { return { msg: '欢迎来到大学学习！' } }
+        });
+
+
+        //定义app组件
+        const app = Vue.extend({
+            template: `
+            <div>
+            <h1>{{msg}}</h1>
+             <hello></hello>
+            <school></school>
+            </div>
+            `,
+            data() { return { msg: 'app组件！' } },
+            components: {
+                hello,
+                school
+            }
+        })
+
+        const vm = new Vue({
+            el: '#root',
+            template: `<app ></app >`,
+            data: {
+            },
+            components: {
+                app
+            },
+            methods: {
+            }
+        });
+    </script>
+</body>
+
+</html>
